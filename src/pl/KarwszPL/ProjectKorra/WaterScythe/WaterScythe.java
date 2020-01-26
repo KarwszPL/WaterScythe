@@ -1,20 +1,25 @@
 package pl.KarwszPL.ProjectKorra.WaterScythe;
 
-import com.projectkorra.projectkorra.ProjectKorra;
 import com.projectkorra.projectkorra.ability.AddonAbility;
 import com.projectkorra.projectkorra.ability.WaterAbility;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
+import org.bukkit.util.Vector;
 
 public class WaterScythe extends WaterAbility implements AddonAbility {
 
+    Location origin;
+    Vector vector;
+
     public WaterScythe(Player player) {
         super(player);
-
+        origin = player.getLocation();
 
 
     }
+
+
 
     @Override
     public void progress() {
