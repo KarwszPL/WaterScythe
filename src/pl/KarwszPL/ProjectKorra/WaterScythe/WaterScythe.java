@@ -1,7 +1,9 @@
 package pl.KarwszPL.ProjectKorra.WaterScythe;
 
+import com.projectkorra.projectkorra.ProjectKorra;
 import com.projectkorra.projectkorra.ability.AddonAbility;
 import com.projectkorra.projectkorra.ability.WaterAbility;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
@@ -46,7 +48,7 @@ public class WaterScythe extends WaterAbility implements AddonAbility {
 
     @Override
     public void load() {
-
+        Bukkit.getPluginManager().registerEvents(new WaterScytheListener(), Bukkit.getPluginManager().getPlugin("ProjectKorra"));
     }
 
     @Override
